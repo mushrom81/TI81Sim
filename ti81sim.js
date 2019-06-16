@@ -42,3 +42,5 @@ class TI81Screen {
         }
     }
 }
+
+let ti81 = new TI81Screen(document.getElementById("ti81"));
