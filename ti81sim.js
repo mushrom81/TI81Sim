@@ -12,6 +12,14 @@ class TI81Screen {
         this._screen = [];
         for (var i = 0; i < 96 * 64; i++) this._screen.push(0);
     }
+    
+    saveImage() {
+        return this._screen.slice();
+    }
+    
+    loadImage(image) {
+        this._screen = image.slice();
+    }
 
     pxTest(x, y) {
         if (x < 0 || y < 0 || x > 95 || y > 63) return;
