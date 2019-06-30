@@ -6,6 +6,9 @@ class TI81Screen {
         this._ctx = this._c.getContext("2d");
         this._screen = [];
         for (var i = 0; i < 96 * 64; i++) this._screen.push(0);
+        this._previousScreen = [];
+        for (var i = 0; i < 96 * 64; i++) this._previousScreen.push(1);
+        this.render();
     }
 
     clearScreen() {
@@ -42,12 +45,15 @@ class TI81Screen {
     render() {
         for (var y = 0; y < 64; y++) {
             for (var x = 0; x < 96; x++) {
-                if (this._screen[y * 96 + x] == 1) { this._ctx.fillStyle = "#1b2b17"; }
-                else { this._ctx.fillStyle = "#aad884"; }
-                this._ctx.fillRect(x * 5, y * 5, 5, 5);
-                this._ctx.stroke();
+                if (this._previousScreen[y * 96 + x] != this._screen[y * 96 + x]) {
+                    if (this._screen[y * 96 + x] == 1) { this._ctx.fillStyle = "#1b2b17"; }
+                    else { this._ctx.fillStyle = "#aad884"; }
+                    this._ctx.fillRect(x * 5, y * 5, 5, 5);
+                    this._ctx.stroke();
+                }
             }            
         }
+        this._previousScreen = this._screen.slice();
     }
 }
 
