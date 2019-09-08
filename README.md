@@ -8,7 +8,7 @@ To add this program to your project:
 Below is a complete list of commands for the simulation:  
   ti81.clearSreen() - sets all pixels to 0  
   ti81.saveImage() - returns a copy of the simulation's screen  
-  ti81.loadImage(image) - imports a copy of the simulation's screen obtained form ti81.saveImage()  
+  ti81.loadImage(image) - imports a copy of the simulation's screen obtained from ti81.saveImage()  
   ti81.pxTest(x,y) - returns the state of a pixel, 1 - on, 0 - off  
   ti81.pxOn(x,y) -  turns a pixel on  
   ti81.pxOff(x,y) - turns a pixel off  
