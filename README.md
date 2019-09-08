@@ -1,9 +1,9 @@
 # TI81Sim
 A simulation of the TI81's screen complete with a few pixel manipulation commands  
   
-To add this program to your project do the following:  
-  Download ti81sim.js and include it in your projects HTML file  
-  Add id="ti81" to the canvas you would like to use for the ti81 simulation  
+To add this program to your project:  
+  Download ti81sim.js and include it in your project's HTML file  
+  Add id="ti81" to the canvas element to be used for the ti81 simulation  
   
 Below is a complete list of commands for the simulation:  
   ti81.clearSreen() - sets all pixels to 0  
